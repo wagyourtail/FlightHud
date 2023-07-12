@@ -23,10 +23,11 @@
   "mixins": [
     "flighthud.mixins.json"
   ],
+  "accessWidener": "flighthud.accesswidener",
   "depends": {
     "fabricloader": ">=0.14.18",
     "fabric-api": "*",
-    "minecraft": "~1.19.4",
+    "minecraft": "1.19.2",
     "java": ">=17"
   }
 }

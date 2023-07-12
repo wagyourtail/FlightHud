@@ -2,14 +2,13 @@ package net.torocraft.flighthud;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Matrix3f;
 import net.minecraft.util.math.Vec3d;
-import org.joml.Matrix3f;
 
 public class FlightComputer {
   private static final float TICKS_PER_SECOND = 20;
@@ -75,8 +74,8 @@ public class FlightComputer {
       return 0.0f;
     }
 
-    float y = normalMatrix.getRowColumn(0, 1);
-    float x = normalMatrix.getRowColumn(1, 1);
+    float y = normalMatrix.a01;
+    float x = normalMatrix.a11;
     return (float) Math.toDegrees(Math.atan2(y, x));
   }
 
